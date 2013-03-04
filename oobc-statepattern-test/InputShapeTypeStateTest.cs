@@ -14,7 +14,7 @@ namespace oobc_statepattern_test
         [TestMethod]
         public void should_set_line_drawer_and_state_to_context()
         {
-            var stateContext = new StateContext();
+            var stateContext = new DrawPad();
             stateContext.GetState().Should().Be(new InputShapeTypeState());
 
             var inputShapeTypeState = new InputShapeTypeState();
@@ -28,7 +28,7 @@ namespace oobc_statepattern_test
         [ExpectedException(typeof(NotImplementedException))]
         public void should_throw_exception_when_input_invalid_shape_type()
         {
-            var stateContext = new StateContext();
+            var stateContext = new DrawPad();
             stateContext.GetState().Should().Be(new InputShapeTypeState());
 
             var inputShapeTypeState = new InputShapeTypeState();
